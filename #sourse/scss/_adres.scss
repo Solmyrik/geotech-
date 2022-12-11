@@ -1,0 +1,23 @@
+.adres {
+  &__container {
+  }
+
+  &__body {
+  }
+  &__title {
+    margin-bottom: 50px;
+  }
+  &__item {
+    margin-bottom: 50px;
+  }
+
+  &__name {
+    color: $red;
+    margin-bottom: 30px;
+  }
+
+  &__map {
+    &_two {
+    }
+  }
+}

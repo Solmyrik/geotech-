@@ -1,0 +1,108 @@
+$minwidth: 320px;
+$mw: 1240px;
+$md1: $mw + 12px;
+$md2: 992px;
+$md3: 767px;
+$md4: 479.98px;
+$maxWidth: 1920px;
+$maxWidthContainer: 1500;
+
+//======================================================================================================================
+.ibg {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+
+  img {
+    display: none;
+  }
+}
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,700&display=swap');
+//var
+//color
+$black: #2e363e;
+$white: #ffffff;
+$blue: #78c2e9;
+$vanil: #f7e8d1;
+$green: #c0e484;
+$red: #ff6766;
+$gray: #676767;
+
+section {
+  margin-bottom: 70px;
+}
+._title {
+  text-align: center;
+  font-size: 46px;
+  font-weight: 700;
+  @media (max-width: $md2) {
+    font-size: 34px;
+  }
+  @media (max-width: $md3) {
+    font-size: 28px;
+  }
+  @media (max-width: $md4) {
+    font-size: 24px;
+  }
+}
+
+._name {
+  font-size: 24px;
+  font-weight: 700;
+  @media (max-width: $md2) {
+    font-size: 22px;
+  }
+  @media (max-width: $md3) {
+    font-size: 20px;
+  }
+  @media (max-width: $md4) {
+    font-size: 18px;
+  }
+}
+._text {
+  font-size: 18px;
+  line-height: 27px;
+  @media (max-width: $md4) {
+    font-size: 15px;
+    line-height: 130%;
+  }
+}
+
+#map1 {
+  width: 100%;
+  height: 500px;
+  // background-color: antiquewhite;
+
+  [class*='copyrights-pane'] {
+    display: none !important;
+  }
+
+  @media (max-width: $md2) {
+    height: calc(70vh - 70px);
+  }
+}
+#map2 {
+  width: 100%;
+  height: 500px;
+  // background-color: antiquewhite;
+
+  [class*='copyrights-pane'] {
+    display: none !important;
+  }
+
+  @media (max-width: $md2) {
+    height: calc(70vh - 70px);
+  }
+}
+.footer {
+  background-color: $blue;
+  &__container {
+  }
+
+  &__copy {
+    text-align: center;
+    padding: 30px 15px;
+    font-size: 20px;
+  }
+}
