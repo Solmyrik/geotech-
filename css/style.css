@@ -98,6 +98,7 @@ section {
   text-align: center;
   font-size: 46px;
   font-weight: 700;
+  position: relative;
 }
 
 @media (max-width: 992px) {
@@ -116,6 +117,34 @@ section {
   ._title {
     font-size: 24px;
   }
+}
+
+._title::before {
+  content: '';
+  position: absolute;
+  left: 0px;
+  opacity: 0.6;
+  z-index: -1;
+  top: 50%;
+  background-image: url("../img/decor/5.svg");
+  width: 30px;
+  height: 30px;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+}
+
+._title::after {
+  content: '';
+  position: absolute;
+  right: 0px;
+  opacity: 0.6;
+  z-index: -1;
+  top: 50%;
+  background-image: url("../img/decor/6.svg");
+  width: 30px;
+  height: 30px;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
 }
 
 ._name {
@@ -677,7 +706,57 @@ main {
 
 .why {
   background-color: #f7e8d1;
-  padding: 50px 0px;
+  padding: 80px 0px;
+  position: relative;
+}
+
+.why__wave {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.why__wave:nth-child(2) {
+  top: auto;
+  left: auto;
+  right: 0;
+  bottom: -4px;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.why__decor {
+  position: absolute;
+  right: 0;
+  top: 20%;
+}
+
+.why__decor img {
+  width: 200px;
+  height: 100px;
+}
+
+.why__container {
+  position: relative;
+}
+
+.why__help {
+  position: absolute;
+  bottom: -80px;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  background-color: #78c2e9;
+  padding: 20px;
+  border-radius: 10px;
+  width: 600px;
+  text-align: center;
+}
+
+@media (max-width: 767px) {
+  .why__help {
+    width: 100%;
+  }
 }
 
 .why__title {
@@ -694,7 +773,10 @@ main {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  gap: 20px;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  row-gap: 20px;
 }
 
 @media (max-width: 767px) {
@@ -724,6 +806,7 @@ main {
       -ms-flex-pack: center;
           justify-content: center;
   padding: 0;
+  margin-bottom: 30px;
 }
 
 @media (max-width: 992px) {
@@ -736,7 +819,11 @@ main {
 
 @media (max-width: 767px) {
   .why__items {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 100%;
+            flex: 0 1 100%;
     margin-bottom: 40px;
+    width: 100%;
   }
 }
 
@@ -850,6 +937,7 @@ main {
 .about__img {
   padding-bottom: 50%;
   border-radius: 25% 10%;
+  position: relative;
 }
 
 .about__img_2 {
@@ -858,6 +946,18 @@ main {
 
 .about__img_3 {
   border-radius: 50% 20% / 10% 40%;
+}
+
+.about__img::before {
+  content: '';
+  position: absolute;
+  background-color: #78c2e9;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  border-radius: 50% 20% / 10% 40%;
+  -webkit-transform: rotate(8deg);
+          transform: rotate(8deg);
 }
 
 .about__left {
@@ -897,6 +997,22 @@ main {
 
 .gallery__decor img {
   width: 100vw;
+}
+
+.gallery__body {
+  position: relative;
+}
+
+.gallery__body::before {
+  content: '';
+  position: absolute;
+  background-color: #78c2e9;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  border-radius: 20px;
+  -webkit-transform: rotate(5deg);
+          transform: rotate(5deg);
 }
 
 .gallery__arrows {
@@ -970,19 +1086,14 @@ main {
   display: -ms-flexbox;
   display: flex;
   gap: 25px;
-}
-
-@media (max-width: 992px) {
-  .price__body {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-  }
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .price__item {
   -webkit-box-flex: 0;
-      -ms-flex: 0 1 25%;
-          flex: 0 1 25%;
+      -ms-flex: 0 1 calc(25% - 19px);
+          flex: 0 1 calc(25% - 19px);
   padding: 30px 20px;
   background-color: #ffd4ca;
   border-radius: 20px;
@@ -1090,6 +1201,68 @@ main {
   -webkit-box-flex: 0;
       -ms-flex: 0 1 50%;
           flex: 0 1 50%;
+  position: relative;
+}
+
+.director__diploma {
+  position: absolute;
+  left: -50px;
+  bottom: -50px;
+  width: 150px;
+  height: 150px;
+  cursor: pointer;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.director__diploma:hover::before {
+  opacity: 1;
+}
+
+.director__diploma:hover::after {
+  opacity: 0.4;
+}
+
+.director__diploma img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+.director__diploma::before {
+  content: '';
+  position: absolute;
+  background-image: url("../img/icon/loop.svg");
+  background-repeat: no-repeat;
+  width: 40px;
+  height: 40px;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  opacity: 0;
+}
+
+.director__diploma::before img {
+  width: 40px;
+  height: 40px;
+}
+
+.director__diploma::after {
+  content: '';
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  top: 0;
+  left: 0;
+  background-color: #2e363e;
+  border-radius: 50%;
+  opacity: 0;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 .director__img {
@@ -1231,6 +1404,22 @@ main {
   right: 0;
 }
 
+.adres {
+  position: relative;
+}
+
+.adres__decor {
+  position: absolute;
+  right: 0;
+  top: 50%;
+}
+
+.adres__decor:nth-child(2) {
+  right: auto;
+  left: 0;
+  top: 10%;
+}
+
 .adres__title {
   margin-bottom: 50px;
 }
@@ -1242,4 +1431,66 @@ main {
 .adres__name {
   color: #ff6766;
   margin-bottom: 30px;
+}
+
+.ymaps-2-1-79-inner-panes,
+.ymaps-2-1-79-map {
+  border-radius: 10% / 50%;
+}
+
+.popup {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-transition: all 0.8s;
+  transition: all 0.8s;
+  z-index: -1;
+  z-index: 442;
+}
+
+.popup.open {
+  z-index: 442;
+  opacity: 1;
+  visibility: visible;
+}
+
+.popup__body {
+  min-height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 30px 10px;
+}
+
+.popup-diploma {
+  position: relative;
+}
+
+.popup-local__thanks {
+  background-color: #ffffff;
+  padding: 40px;
+}
+
+.popup-local__thanks img {
+  width: 100%;
+}
+
+.close-popup {
+  position: absolute;
+  top: 20px;
+  cursor: pointer;
+  right: 15px;
 }
