@@ -1215,6 +1215,35 @@ main {
   transition: all 0.3s;
 }
 
+@media (max-width: 1100px) {
+  .director__diploma {
+    bottom: 0;
+  }
+}
+
+@media (max-width: 1063px) {
+  .director__diploma {
+    bottom: 40px;
+    left: -20px;
+  }
+}
+
+@media (max-width: 992px) {
+  .director__diploma {
+    left: 0px;
+    bottom: -40px;
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@media (max-width: 479.98px) {
+  .director__diploma {
+    width: 70px;
+    height: 70px;
+  }
+}
+
 .director__diploma:hover::before {
   opacity: 1;
 }
@@ -1227,6 +1256,13 @@ main {
   width: 150px;
   height: 150px;
   border-radius: 50%;
+}
+
+@media (max-width: 992px) {
+  .director__diploma img {
+    width: 100px;
+    height: 100px;
+  }
 }
 
 .director__diploma::before {
