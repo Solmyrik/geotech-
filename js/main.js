@@ -88,3 +88,18 @@ if (mapSectionTwo) {
     map.geoObjects.add(placemark);
   }
 }
+
+const headerAdres = document.querySelector('.header__adres');
+const adresBlock = document.querySelector('.adres');
+
+headerAdres.addEventListener('mouseover', () => {
+  window.scrollTo(0, adresBlock.getBoundingClientRect().top);
+});
+
+const priceBody = document.querySelector('.price__body_fake');
+const priceBtn = document.querySelector('.price__btn');
+
+priceBtn.addEventListener('click', (e) => {
+  priceBody.style.display = 'flex';
+  priceBtn.style.display = 'none';
+});
