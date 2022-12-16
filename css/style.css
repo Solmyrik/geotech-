@@ -1232,14 +1232,19 @@ main {
 
 .about__right {
   -webkit-box-flex: 0;
-      -ms-flex: 0 1 50%;
-          flex: 0 1 50%;
+      -ms-flex: 0 1 40%;
+          flex: 0 1 40%;
 }
 
 .about__img {
-  padding-bottom: 50%;
   border-radius: 25% 10%;
   position: relative;
+}
+
+.about__img img {
+  width: 100%;
+  height: 306px;
+  border-radius: 25% 10%;
 }
 
 .about__img_1 {
@@ -1766,6 +1771,11 @@ main {
   background-color: #00d084;
 }
 
+.reviews__text img {
+  width: 100%;
+  border-radius: 10% 30% 30% 20%;
+}
+
 .reviews__decor {
   position: absolute;
 }
@@ -1798,12 +1808,25 @@ main {
   position: absolute;
   right: 0;
   top: 50%;
+  z-index: -1;
+}
+
+@media (max-width: 479.98px) {
+  .adres__decor {
+    top: 60%;
+  }
 }
 
 .adres__decor:nth-child(2) {
   right: auto;
   left: 0;
-  top: 10%;
+  top: 30%;
+}
+
+@media (max-width: 479.98px) {
+  .adres__decor:nth-child(2) {
+    top: 20%;
+  }
 }
 
 .adres__body {
@@ -1897,10 +1920,6 @@ main {
   right: 15px;
 }
 
-.contacts__body {
-  position: relative;
-}
-
 .contacts__decor {
   position: absolute;
   bottom: 0%;
@@ -1951,18 +1970,9 @@ main {
 }
 
 .contacts__content {
-  position: absolute;
-  top: 50%;
-  left: 100px;
+  position: relative;
+  z-index: 5;
   padding-bottom: 20px;
-  color: #ffffff;
-}
-
-@media (max-width: 767px) {
-  .contacts__content {
-    left: 60px;
-    padding-right: 50px;
-  }
 }
 
 .contacts__phones {
@@ -1977,7 +1987,7 @@ main {
 }
 
 .contacts__phones a {
-  color: #c0e484;
+  color: #ff6766;
   padding: 5px 0px;
   -webkit-transition: color 0.2s;
   transition: color 0.2s;
@@ -1985,7 +1995,7 @@ main {
 }
 
 .contacts__phones a:hover {
-  color: #ff6766;
+  color: #c0e484;
 }
 
 .contacts__vk {
@@ -1997,6 +2007,7 @@ main {
 .contacts__vk svg {
   -webkit-transition: fill 0.3s;
   transition: fill 0.3s;
+  fill: #78c2e9;
 }
 
 .contacts__vk:hover svg {
