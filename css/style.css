@@ -1232,19 +1232,20 @@ main {
 
 .about__right {
   -webkit-box-flex: 0;
-      -ms-flex: 0 1 40%;
-          flex: 0 1 40%;
+      -ms-flex: 0 1 50%;
+          flex: 0 1 50%;
 }
 
 .about__img {
+  padding-bottom: 50%;
   border-radius: 25% 10%;
   position: relative;
 }
 
-.about__img img {
-  width: 100%;
-  height: 306px;
-  border-radius: 25% 10%;
+@media (max-width: 479.98px) {
+  .about__img {
+    padding-bottom: 100%;
+  }
 }
 
 .about__img_1 {
@@ -1273,8 +1274,8 @@ main {
 
 .about__left {
   -webkit-box-flex: 0;
-      -ms-flex: 0 1 60%;
-          flex: 0 1 60%;
+      -ms-flex: 0 1 50%;
+          flex: 0 1 50%;
 }
 
 .about__name {
@@ -1756,9 +1757,7 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  gap: 100px;
   border-radius: 50%;
   border: 1px solid #ffffff;
 }
@@ -1774,6 +1773,19 @@ main {
 .reviews__text img {
   width: 100%;
   border-radius: 10% 30% 30% 20%;
+}
+
+.reviews__right {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 50%;
+          flex: 0 1 50%;
+}
+
+.reviews__left {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 50%;
+          flex: 0 1 50%;
+  text-align: left;
 }
 
 .reviews__decor {
@@ -1972,7 +1984,22 @@ main {
 .contacts__content {
   position: relative;
   z-index: 5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding-bottom: 20px;
+}
+
+@media (max-width: 767px) {
+  .contacts__content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 .contacts__phones {
@@ -1996,6 +2023,30 @@ main {
 
 .contacts__phones a:hover {
   color: #c0e484;
+}
+
+.contacts__right {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 50%;
+          flex: 0 1 50%;
+}
+
+.contacts__left {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 50%;
+          flex: 0 1 50%;
+  text-align: left;
+}
+
+.contacts__left a {
+  color: #78c2e9;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  font-size: 22px;
+}
+
+.contacts__left a:hover {
+  color: #ff6766;
 }
 
 .contacts__vk {
